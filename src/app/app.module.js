@@ -1,8 +1,13 @@
-angular
-    .module('app', [
-        // Angular modules
-        'ngRoute',
+(function() {
+    'use strict';
     
-        // Third-party modules
-        'firebase'
-]);
+    angular
+        .module('app', [
+            // Angular modules
+            'ngRoute',
+
+            // Third-party modules
+            'firebase'
+    ]);
+    
+})();
