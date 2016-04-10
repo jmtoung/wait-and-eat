@@ -10,7 +10,7 @@
     function WaitListController($firebaseArray) {
         var vm = this;
         
-        var fireParties = new Firebase('https://waitandeat-jmt.firebaseio.com/partiesU');
+        var fireParties = new Firebase('https://waitandeat-jmt.firebaseio.com/parties');
         
         function Party() {
             this.name = '';
