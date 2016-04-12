@@ -35,7 +35,7 @@
             return firebaseAuthObject.$authWithPassword(user)
                 .then(function(loggedInUser) {
                     console.log(loggedInUser);
-                    $location.path('/waitList');
+                    $location.path('/waitlist');
                 })
                 .catch(function(error) {
                     console.log(error);
