@@ -11,7 +11,7 @@
         var root = new Firebase(FIREBASE_URL);
         
         var service = {
-            root = root
+            root: root
         };
         
         return service;
