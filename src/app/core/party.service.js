@@ -3,7 +3,7 @@
     
     angular
         .module('app.core')
-        .factory('partySerivce', partyService);
+        .factory('partyService', partyService);
     
     function partyService() {
     
