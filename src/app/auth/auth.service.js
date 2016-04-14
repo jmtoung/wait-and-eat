@@ -1,20 +1,27 @@
 (function() {
-  'use strict';
+    'use strict';
 
-  angular
-    .module('app.auth')
-    .factory('authService', authService);
+    angular
+        .module('app.auth')
+        .factory('authService', authService);
+    
+    authService.$inject = ['$firebaseAuth', 'firebaseDataService'];
 
-  authService.$inject = [];
-
-  function authService() {
-
-    var service = {};
-
-    return service;
-
-    ////////////
-
-  }
+    function authService($firebaseAuth, firebaseDataService) {
+        var firebaseAuthObject = $firebaseAuth(firebaseDataService.root);
+        
+        var service = {
+            register: register
+        };
+        
+        return service;
+        
+        ////////////
+        
+        function register(user) {
+            firebaseAuthObject.$createUser(user);
+        }
+    
+    }
 
 })();
