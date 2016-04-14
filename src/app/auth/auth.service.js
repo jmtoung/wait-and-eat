@@ -19,7 +19,7 @@
         ////////////
         
         function register(user) {
-            firebaseAuthObject.$createUser(user);
+            return firebaseAuthObject.$createUser(user);
         }
     
     }
