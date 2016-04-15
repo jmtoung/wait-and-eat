@@ -11,7 +11,7 @@
     
         var service = {
             Party: Party,
-            parties: $firebaseArray(firebaseDataService.root.child('parties'))
+            getPartiesByUser
         };
         
         return service;
@@ -23,6 +23,10 @@
             this.done = false;
             this.notified = false;
         }
+    }
+    
+    function getPartiesByUser(uid) {
+        return $firebaseArray(firebaseDataService.users.child(uid).child('parties'));    
     }
     
 })();
