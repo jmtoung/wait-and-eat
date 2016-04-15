@@ -11,10 +11,12 @@
     
         var service = {
             Party: Party,
-            getPartiesByUser
+            getPartiesByUser: getPartiesByUser
         };
         
         return service;
+        
+        ////////////
         
         function Party() {
             this.name = '';
@@ -23,10 +25,11 @@
             this.done = false;
             this.notified = false;
         }
-    }
-    
-    function getPartiesByUser(uid) {
-        return $firebaseArray(firebaseDataService.users.child(uid).child('parties'));    
-    }
+        
+        function getPartiesByUser(uid) {
+            return $firebaseArray(firebaseDataService.users.child(uid).child('parties'));    
+        }
+
+    }   
     
 })();
