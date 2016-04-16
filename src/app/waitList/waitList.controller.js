@@ -9,21 +9,20 @@
     
     function WaitListController(partyService, textMessageService, user) {
         var vm = this;
-        
-        // Log user to the console
-        console.log(user);
 
-        vm.newParty = new partyService.Party();
+        //vm.newParty = new partyService.Party();
         vm.parties = partyService.getPartiesByUser(user.uid);
-        vm.addParty = addParty;
+        console.log(user.uid);
+        console.log(vm.parties);
+        //vm.addParty = addParty;
         vm.removeParty = removeParty;
         vm.sendTextMessage = sendTextMessage;
         vm.toggleDone = toggleDone;
         
-        function addParty() {
-            vm.parties.$add(vm.newParty);
-            vm.newParty = new partyService.Party();
-        }
+        //function addParty() {
+        //    vm.parties.$add(vm.newParty);
+        //    vm.newParty = new partyService.Party();
+        //}
         
         function removeParty(party) {
             vm.parties.$remove(party);
